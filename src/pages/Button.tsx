@@ -1,4 +1,4 @@
-import SubmitButton from "../components/Button";
+import SubmitButton from "../components/SubmitButton";
 
 export default function ButtonPage() {
   return (
