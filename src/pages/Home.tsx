@@ -17,12 +17,14 @@ export default function Home() {
           </Link>
         </li>
 
-        {/* Add more later */}
-        {/* 
         <li>
-          <Link to="/toggle">Theme Toggle</Link>
+          <Link
+            to="/checkbox"
+            className="block p-4 rounded-lg text-white bg-zinc-800 hover:bg-zinc-700 transition w-60"
+          >
+            Motion Checkbox →
+          </Link>
         </li>
-        */}
       </ul>
     </div>
   );

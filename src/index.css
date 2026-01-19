@@ -35,3 +35,11 @@ canvas {
   pointer-events: none;
   z-index: 9999;
 }
+
+.border-token {
+  color: rgb(var(--border));
+}
+
+.text-token {
+  color: rgb(var(--text));
+}

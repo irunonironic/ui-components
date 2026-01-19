@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import ThemeToggle from "./components/ThemeToggle";
 import Button from "./pages/Button";
 import Home from "./pages/Home";
+import Checkbox from './pages/CheckboxUi'
 <Home />
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/button" element={<Button />} />
+        <Route path="checkbox" element={<Checkbox />} />
       </Routes>
     </div>
   );
