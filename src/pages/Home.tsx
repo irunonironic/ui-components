@@ -25,6 +25,14 @@ export default function Home() {
             Motion Checkbox →
           </Link>
         </li>
+        <li>
+           <Link
+            to="/rating"
+            className="block p-4 rounded-lg text-white bg-zinc-800 hover:bg-zinc-700 transition w-60"
+          >
+           Rating →
+          </Link>
+        </li>
       </ul>
     </div>
   );

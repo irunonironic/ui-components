@@ -3,19 +3,17 @@
 /* =====================
    THEME TOKENS
 ===================== */
-
 :root {
-  --bg: 255 255 255;      /* white */
-  --card: 255 255 255;    /* white */
-  --text: 17 24 39;       /* dark text */
-  --border: 229 231 235;  /* very light */
+  --bg: 255 255 255;
+  --bg-hover: 243 244 246; /* light gray */
+  --text: 17 24 39;
+  --border: 229 231 235;
 }
-
 
 .dark {
   --bg: 10 10 10;
+  --bg-hover: 24 24 27; /* soft dark */
   --text: 245 245 245;
-  --card: 24 24 27;
   --border: 39 39 42;
 }
 

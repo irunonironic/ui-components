@@ -3,6 +3,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import Button from "./pages/Button";
 import Home from "./pages/Home";
 import Checkbox from './pages/CheckboxUi'
+import StarRating from "./components/Rating";
 <Home />
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/button" element={<Button />} />
         <Route path="checkbox" element={<Checkbox />} />
+         <Route path="rating" element={<StarRating />} />
       </Routes>
     </div>
   );
