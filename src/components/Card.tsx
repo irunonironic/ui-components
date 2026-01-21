@@ -1,5 +1,5 @@
 import React, {  useState } from "react";
-import { motion, AnimatePresence , } from "motion/react";
+import { motion, AnimatePresence ,useMotionValue, useMotionTemplate } from "motion/react";
 import {
   Github,
   Clock,
@@ -7,6 +7,7 @@ import {
   Check,
   MessageSquare,
   GitBranchIcon,
+  ChevronDown
 } from "lucide-react";
 
 
@@ -18,6 +19,21 @@ const Card = () => {
     { id: 2, label: "Component Development", completed: false },
     { id: 3, label: "Documentation", completed: false },
   ]);
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
+  const background = useMotionTemplate`radial-gradient(
+    650px circle at ${mouseX}px ${mouseY}px,
+    rgba(14, 165, 233, 0.15),
+    transparent 80%
+  )`;
 
   const completedCount = tasks.filter((t) => t.completed).length;
   const progressPercent = Math.round((completedCount / tasks.length) * 100);
@@ -36,14 +52,15 @@ const Card = () => {
         onClick={() => setIsExpanded(!isExpanded)}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+        onMouseMove={handleMouseMove}
         transition={{
           layout: { duration: 0.4, type: "spring", bounce: 0, stiffness: 100 },
         }}
-        className=" relative w-full max-w-[380px] cursor-pointer overflow-hidden rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-6 shadow-sm"
+        className="group relative w-full max-w-[380px] cursor-pointer overflow-hidden rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-6 shadow-sm"
       >
-        <motion.div
+       <motion.div
           className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-3xl"
-          
+          style={{ background }}
         />
         {/* Header */}
         <motion.div
@@ -53,8 +70,11 @@ const Card = () => {
           <span className="rounded-full border border-blue-100 bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-400">
             In Progress
           </span>
-          <motion.div className="rounded-lg border border-gray-300 px-2 py-1">
-            <Github className="h-4 w-4" />
+         <motion.div 
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            className="text-gray-400"
+          >
+             <ChevronDown className="h-5 w-5" />
           </motion.div>
         </motion.div>
 
