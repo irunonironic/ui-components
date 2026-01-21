@@ -4,6 +4,7 @@ import Button from "./pages/Button";
 import Home from "./pages/Home";
 import Checkbox from './pages/CheckboxUi'
 import StarRating from "./components/Rating";
+import Card from "./components/Card";
 <Home />
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/button" element={<Button />} />
         <Route path="checkbox" element={<Checkbox />} />
          <Route path="rating" element={<StarRating />} />
+         <Route path="card" element={<Card />} />
       </Routes>
     </div>
   );

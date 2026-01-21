@@ -32,6 +32,14 @@ export default function Home() {
           >
            Rating →
           </Link>
+          </li>
+          <li>
+          <Link
+            to="/card"
+            className="block p-4 rounded-lg text-white bg-zinc-800 hover:bg-zinc-700 transition w-60"
+          >
+          Card →
+          </Link>
         </li>
       </ul>
     </div>
