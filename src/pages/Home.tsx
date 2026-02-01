@@ -39,7 +39,37 @@ export default function Home() {
             className="block p-4 rounded-lg text-white bg-zinc-800 hover:bg-zinc-700 transition w-60"
           >
           Card →
+
           </Link>
+          </li>
+          <li>
+          <Link
+            to="/loader"
+            className="block p-4 rounded-lg text-white bg-zinc-800 hover:bg-zinc-700 transition w-60"
+          > 
+
+        Loader →
+        </Link>
+
+        </li>
+
+        <li>
+          <Link
+            to="/loader1"
+            className="block p-4 rounded-lg text-white bg-zinc-800 hover:bg-zinc-700 transition w-60"
+          > 
+
+        Loader 1 →
+        </Link>
+        </li>
+        <li>
+          <Link
+            to="/loader-cat"
+            className="block p-4 rounded-lg text-white bg-zinc-800 hover:bg-zinc-700 transition w-60"
+          > 
+
+        Loader cat →
+        </Link>
         </li>
       </ul>
     </div>

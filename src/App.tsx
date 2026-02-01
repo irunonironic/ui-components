@@ -6,6 +6,9 @@ import Checkbox from './pages/CheckboxUi'
 import StarRating from "./components/Rating";
 import Card from "./components/Card";
 <Home />
+import LoaderPage from "./pages/LoaderPage";
+import LoaderPage1 from "./pages/LoaderPage1";
+import LoaderCat from "./pages/LoaderCat"
 export default function App() {
   return (
     <div className="min-h-screen bg-bg text-text">
@@ -21,9 +24,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/button" element={<Button />} />
-        <Route path="checkbox" element={<Checkbox />} />
-         <Route path="rating" element={<StarRating />} />
-         <Route path="card" element={<Card />} />
+        <Route path="/checkbox" element={<Checkbox />} />
+         <Route path="/rating" element={<StarRating />} />
+         <Route path="/card" element={<Card />} />
+         <Route path="/loader" element={<LoaderPage  />} />
+          <Route path="/loader1" element={<LoaderPage1  />} />
+          <Route path="/loader-cat" element={<LoaderCat  />} />
       </Routes>
     </div>
   );
